@@ -1,12 +1,11 @@
 <div class="container-fluid">
-  <div class="row col-6 m-3">
     <div class="card">
       <h3>Create Your Quotes Here</h3>
       <hr>
       <form (ngSubmit)="publishQuote()" #quoteForm='ngForm' novalidate>
         <div class="form-group " >
           <label for="quote">Quote</label>
-          <textarea id="quote" name="quote" rows="3" placeholder="Write your quote here" #quote='ngModel'[(ngModel)]="newQuote.quote"required></textarea>
+          <textarea type="text" id="quote" name="quote" rows="2" placeholder="Write your quote here" #quote='ngModel'[(ngModel)]="newQuote.quote"required class="form-control"></textarea>
         </div>
         <div [hidden]="quote.valid || quote.pristine">
           <p *ngIf="!newQuote.quote" class="alert alert-danger">This field is required</p>
@@ -14,7 +13,7 @@
 
         <div class="form-group p-3">
           <label for="author">Author</label>
-          <input type="text" name="author" id="author" placeholder="Name of author" required #author='ngModel'[(ngModel)]="newQuote.author"/>
+          <input type="text" name="author" id="author" placeholder="Name of author" required #author='ngModel'[(ngModel)]="newQuote.author" class="form-control"/>
         </div> 
         <div [hidden]="author.valid || author.pristine">
         <p *ngIf="!newQuote.author" class="alert alert-danger">This field is required</p>
@@ -26,8 +25,7 @@
         <div [hidden]="publisher.valid || publisher.pristine">
         <p *ngIf="!newQuote.publisher" class="alert alert-danger">This field is required</p>
         </div>
-        <button class="btn btn-success mb-3">Publish</button>
+        <button class="btn btn-primary btn-sm m-3">Publish</button>
       </form>
     </div>
-  </div>
 </div>
