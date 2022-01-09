@@ -13,9 +13,7 @@ newQuote = new Quotes(0, "", "", "", new Date(), 0, 0, false);
 @Output() addQuote = new EventEmitter<Quotes>();
 
 publishQuote(){
-  console.log(this.newQuote);
-  // this.addQuote.emit(this.newQuote);
-  // this.newQuote = new Quotes(0, "", "", "", new Date(), 0, 0, false);
+  this.addQuote.emit(this.newQuote);
 }
 
   constructor() { }
