@@ -18,6 +18,12 @@ export class QuoteComponent implements OnInit {
     new Quotes(6, '"Opportunity does not knock, it presents itself, when you beat down the door".', 'Kyle Chandler', 'Kenia', new Date, 0, 0, false),
   ];
 
+  addNewQuote(quotes){
+    let quoteLength = this.quote.length;
+    quotes.id = quoteLength+1;
+    quotes.uploadDate = new Date(quotes.uploadDate)
+    this.quote.push(quotes)
+  }
   constructor() { }
 
   ngOnInit(): void {
