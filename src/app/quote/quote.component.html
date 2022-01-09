@@ -2,10 +2,11 @@
     <h1>My Quotes</h1>
     <hr>
     <ul>
-        <div class="card">
-            <li *ngFor="let quote of quote">
+        <div *ngFor="let quote of quote; let i=index" class="card">
+            <li >
                {{ quote.id }} "{{ quote.quote}}." posted {{ quote.uploadDate|daysPassedCount}} days ago
             </li>
+            <li appPopularQuoteHighlight>-{{ quote.author }}</li>
         </div>
     </ul>
     <div class="col-md-6">

@@ -8,6 +8,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteComponent } from './quote/quote.component';
 import { DaysPassedCountPipe } from './days-passed-count.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { PopularQuoteHighlightDirective } from './popular-quote-highlight.directive';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     QuoteComponent,
     DaysPassedCountPipe,
     QuoteDetailsComponent,
+    PopularQuoteHighlightDirective,
   ],
   
   imports: [
