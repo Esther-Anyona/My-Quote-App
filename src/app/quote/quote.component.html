@@ -4,7 +4,7 @@
     <ul>
         <div class="card">
             <li *ngFor="let quote of quote">
-                {{ quote.quote}}
+                {{ quote.quote}} posted on {{ quote.uploadDate|daysPassedCount}}
             </li>
         </div>
     </ul>
