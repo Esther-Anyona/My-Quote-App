@@ -8,7 +8,7 @@
                         {{quote.id}}.  "{{ quote.quote}}." 
                     </li>
     
-                    <button (click)="showDetails(i)">Show Details</button>
+                    <button class="btn btn-outline-primary dropdown-toggle mt-5" (click)="showDetails(i)">Show Details</button>
                     <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isRead)="deleteQuote($event,i)"></app-quote-details>                                  
             </div>       
         </ul>
@@ -16,6 +16,7 @@
     
     <div class="popular-quote">
         <div class="card-body" *ngFor="let popular of populars; let i=index" appPopularQuoteHighlight>
+            <h3 class="text">Popular Quote</h3>
             {{ popular.id}}. "{{ popular.quote }}." - {{ popular.author }}
             <h6>Upvotes: {{ popular.upvote }} upvotes</h6>
             <h6>Published by: {{ popular.publisher }}</h6>

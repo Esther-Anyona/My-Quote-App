@@ -26,4 +26,7 @@ ul{
     margin: 20px;
     padding: 20px;
 }
- 
+.text{
+    color: rgb(89,38,84);
+    text-decoration: underline;
+}
