@@ -2,18 +2,20 @@
     <h1>My Quotes</h1>
     <hr>
     <ul>
-        <div class="row row-cols-md-6 row-cols-sm-6 row-cols-lg-12">
-            <div *ngFor="let quote of quote; let i=index" class="card-columns">
-                <div class="card-body">
-                    <li >
-                        "{{ quote.quote}}." 
-                    </li>
-                    <button (click)="showDetails(i)">Show Details</button>
-                        <!-- <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (quoteRead)="deleteQuote"></app-quote-details> -->
-        
-                    <li appPopularQuoteHighlight>-{{ quote.author }}</li>
-                </div>              
-            </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div *ngFor="let quote of quote; let i=index" class="card-columns">
+                    <div class="card-body">
+                        <li >
+                            "{{ quote.quote}}." 
+                        </li>
+                        <button (click)="showDetails(i)">Show Details</button>
+                            <!-- <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (quoteRead)="deleteQuote"></app-quote-details> -->
+            
+                        <li appPopularQuoteHighlight>-{{ quote.author }}</li>
+                    </div>              
+                </div>
+            </div>          
         </div>       
     </ul>
     <div class="col-md-6">
@@ -23,7 +25,8 @@
     <div class="col-md-6">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-
 </div>
+
+
 <!-- posted {{ quote.uploadDate|daysPassedCount}} days ago -->
 

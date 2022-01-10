@@ -3,6 +3,7 @@
     background-image:url(../../assets/istockphoto-1270080185-170667a.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 h1{
     text-align: center;
@@ -11,15 +12,15 @@ h1{
     font-style: italic;
 }
 ul{
+    display: block;
     list-style: none;
 }
 
 .card-body{
     background-color: whitesmoke;
-    /* background-color: rgba(88, 6, 84, 0.5); */
     color: rgb(42, 56, 185);
     font-weight: bold;
     border-radius: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 0px;
+    margin: 20px;
 }
