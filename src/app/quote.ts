@@ -1,6 +1,7 @@
 export class Quote {
 
     showDetails:boolean;
+
     constructor(
         public id: number,
         public quote: string,
@@ -11,6 +12,7 @@ export class Quote {
         public downvote: number,
         public highestUpvotes: boolean
     ){
+        
      this.showDetails=false;   
     }
     
