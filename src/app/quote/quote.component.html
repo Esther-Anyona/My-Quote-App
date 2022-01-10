@@ -16,9 +16,8 @@
     
     <div class="popular-quote">
         <div class="card-body" *ngFor="let popular of populars; let i=index" appPopularQuoteHighlight>
-            {{ popular.id}}. "{{ popular.quote }}."
+            {{ popular.id}}. "{{ popular.quote }}." - {{ popular.author }}
             <h6>Upvotes: {{ popular.upvote }} upvotes</h6>
-            <h6>Author: {{ popular.author }}</h6>
             <h6>Published by: {{ popular.publisher }}</h6>
         </div>
     </div>
