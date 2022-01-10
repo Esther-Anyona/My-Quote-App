@@ -2,13 +2,16 @@
     background-color: rgba(88, 6, 84, 0.5);
     box-sizing: border-box;
     box-shadow: 2px 3px 1px 4px rgb(88,6,84);
-    margin:5px;
+    /* margin:25px 10px; */
     border-radius: 25px;
     padding:10px;
+    margin-bottom: -200px;
+
 }
 form, h3{
     text-align: center;
     color: rgb(42, 56, 185);
+    border-bottom: 20px;
 }
 .form-control{
     text-align: left;
@@ -19,6 +22,11 @@ form, h3{
     box-sizing: border-box;
     border: 2px solid rgb(88,6,84);
     border-radius: 4px;
+}
+.card{
+    border-bottom: 20px;
+    margin-bottom: 20px;
+
 }
 
 

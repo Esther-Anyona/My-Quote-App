@@ -2,22 +2,28 @@
     <h1>My Quotes</h1>
     <hr>
     <ul>
-        <div *ngFor="let quote of quote; let i=index" class="card">
-            <li >
-               {{ quote.id }} "{{ quote.quote}}." posted {{ quote.uploadDate|daysPassedCount}} days ago
-            </li>
-            <li appPopularQuoteHighlight>-{{ quote.author }}</li>
-        </div>
+        <div class="row row-cols-md-6 row-cols-sm-6 row-cols-lg-12">
+            <div *ngFor="let quote of quote; let i=index" class="card-columns">
+                <div class="card-body">
+                    <li >
+                        "{{ quote.quote}}." 
+                    </li>
+                    <button (click)="showDetails(i)">Show Details</button>
+                        <!-- <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (quoteRead)="deleteQuote"></app-quote-details> -->
+        
+                    <li appPopularQuoteHighlight>-{{ quote.author }}</li>
+                </div>              
+            </div>
+        </div>       
     </ul>
     <div class="col-md-6">
-        <app-quote-details *ngIf=""></app-quote-details>
         <!-- <app-quote-details [quote]="quote"></app-quote-details> -->
-        <p *ngIf="quote">5">You have too many quotes</p>   
+        <!-- <p *ngIf="quote.length>5">You have too many quotes</p>    -->
     </div>
     <div class="col-md-6">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
 
 </div>
-
+<!-- posted {{ quote.uploadDate|daysPassedCount}} days ago -->
 
