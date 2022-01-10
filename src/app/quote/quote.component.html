@@ -9,7 +9,7 @@
                     </li>
     
                     <button (click)="showDetails(i)">Show Details</button>
-                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isRead)="deleteQuote"></app-quote-details>                                  
+                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isRead)="deleteQuote($event,i)"></app-quote-details>                                  
             </div>       
         </ul>
     </div>
