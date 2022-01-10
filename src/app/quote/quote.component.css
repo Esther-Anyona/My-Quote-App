@@ -7,7 +7,7 @@
 }
 h1{
     text-align: center;
-    color: rgb(42, 56, 185);
+    color: white;
     font-weight: bolder;
     font-style: italic;
 }
@@ -17,10 +17,13 @@ ul{
 }
 
 .card-body{
+    float: left;
     background-color: whitesmoke;
     color: rgb(42, 56, 185);
     font-weight: bold;
     border-radius: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
+    padding: 20px;
 }
+ 

@@ -1,16 +1,25 @@
-<p>{{quote}}</p>
-<div class="container-fluid">
-    <h6>Author: {{ quote }}</h6>
-    <h6>Published: {{ quote }}</h6>
-    <h6>Posted: {{ quote }}</h6>
-    <h6>Upvotes: {{ quote }}</h6>
-    <h6>Downvotes: {{ quote }}</h6>
-    <button (click)="deleteRead(true)" class="btn btn-success">Upvote</button>
-    <button class="btn btn-danger">Downvote</button>
 
+<div class="container-fluid">
+    <h6>Author: {{ quote.author }}</h6>
+    <h6>Published by: {{ quote.publisher }}</h6>
+    <h6>Posted: {{ quote.uploadDate|daysPassedCount }} days ago</h6>
+    <h6 id="like">Upvotes: {{ quote.upvote }} upvotes</h6>
+    <h6 id="dislike">Downvotes: {{ quote.downvote }} downvotes</h6>
+    <!-- <button (click)="deleteRead(true)" class="btn btn-danger">Delete</button> -->
 </div>
-<i id="likes" class="fa fa-thumbs-up">Upvote</i><br>
-<i class="fa fa-thumbs-down">Downvote</i><br>
-<i class="fa fa-trash">Delete</i>
+<div class="icons">
+    <button class="btn btn-success" (click)="upvote()">
+        <i id="likes" class="fa fa-thumbs-up" id="likes"></i>
+        {{ quote.upvote }}
+    </button>
+    <button class="btn btn-dark" (click)="downvote()">
+        <i id="likes" class="fa fa-thumbs-down" id="dislikes"></i>
+        {{ quote.downvote }}
+    </button>
+    <button class="btn btn-danger" (click)="deleteQuote(true)">
+        <i id="likes" class="fa fa-trash" id="delete"></i>
+    </button>
+</div>
+
 
 

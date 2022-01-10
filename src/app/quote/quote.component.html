@@ -1,32 +1,31 @@
 <div class="container-fluid">
     <h1>My Quotes</h1>
     <hr>
-    <ul>
-        <div class="row">
-            <div class="col-md-6">
-                <div *ngFor="let quote of quote; let i=index" class="card-columns">
-                    <div class="card-body">
-                        <li >
-                            "{{ quote.quote}}." 
-                        </li>
-                        <button (click)="showDetails(i)">Show Details</button>
-                            <!-- <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (quoteRead)="deleteQuote"></app-quote-details> -->
-            
-                        <li appPopularQuoteHighlight>-{{ quote.author }}</li>
-                    </div>              
-                </div>
-            </div>          
-        </div>       
-    </ul>
-    <div class="col-md-6">
-        <!-- <app-quote-details [quote]="quote"></app-quote-details> -->
-        <!-- <p *ngIf="quote.length>5">You have too many quotes</p>    -->
+    <div class="quotes col-md-6">
+        <ul>     
+            <div class="card-body" *ngFor="let quote of quotes; let i=index">
+                    <li >
+                        {{quote.id}}.  "{{ quote.quote}}." 
+                    </li>
+    
+                    <button (click)="showDetails(i)">Show Details</button>
+                    <app-quote-details *ngIf="quote.showDetails" [quote]="quote" (isRead)="deleteQuote"></app-quote-details>                                  
+            </div>       
+        </ul>
+    </div>
+    
+    <div class="popular-quote">
+        <div class="card-body" *ngFor="let popular of populars; let i=index" appPopularQuoteHighlight>
+            {{ popular.id}}. "{{ popular.quote }}."
+            <h6>Upvotes: {{ popular.upvote }} upvotes</h6>
+            <h6>Author: {{ popular.author }}</h6>
+            <h6>Published by: {{ popular.publisher }}</h6>
+        </div>
     </div>
     <div class="col-md-6">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
+    </div>    
 </div>
 
 
-<!-- posted {{ quote.uploadDate|daysPassedCount}} days ago -->
 
